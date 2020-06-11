@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote alias="repo" fetch="https://github.com/openembedded" name="oe"/>
+    <remote alias="repo" fetch="https://github.com" name="github"/>
+    <remote alias="repo" fetch="https://git.toradex.com" name="toradex"/>
+    <remote alias="repo" fetch="https://git.yoctoproject.org/git" name="yocto"/>
+    <remote alias="repo" fetch="https://github.com/tszucs" name="sw-host-sho"/>
+
+    <default sync-j="4"/>
+
+    <!-- openembedded -->
+    <project name="bitbake.git" path="layers/openembedded-core/bitbake" remote="oe" revision="2e4845c526117d5524cff910afbb6f8212a3e199" upstream="1.36"/>
+    <project name="meta-openembedded.git" path="layers/meta-openembedded" remote="oe" revision="eae996301d9c097bcbeb8046f08041dc82bb62f8" upstream="rocko"/>
+    <project name="openembedded-core.git" path="layers/openembedded-core" remote="oe" revision="3638cb32ba9ba32b4d498fc31ab7fdf82f0d2495" upstream="rocko"/>
+
+    <!-- GitHub -->
+    <project name="Angstrom-distribution/meta-angstrom.git" path="layers/meta-angstrom" remote="github" revision="4318892e08ea9102d29bdd92af83539bea985e4b" upstream="angstrom-v2017.12-rocko"/>
+    <project name="OSSystems/meta-browser.git" path="layers/meta-browser" remote="github" revision="75640e14e325479c076b6272b646be7a239c18aa" upstream="master"/>
+    <project name="Freescale/meta-freescale-3rdparty.git" path="layers/meta-freescale-3rdparty" remote="github" revision="e71ace9ede9b58f2ed3381a53fdc814f8e963c60" upstream="rocko"/>
+    <project name="Freescale/meta-freescale-distro.git" path="layers/meta-freescale-distro" remote="github" revision="51756d1c2058139c8a21f89b86cfd8007b71b7f0" upstream="rocko"/>
+    <project name="Freescale/meta-freescale.git" path="layers/meta-freescale" remote="github" revision="61ab34ac6d664a229847b796ec20fd9f7c8ecbf4" upstream="rocko"/>
+    <project name="watatuki/meta-jetson-tk1.git" path="layers/meta-jetson-tk1" remote="github" revision="e8b87fe8da7c6fcffa37ab245f50082953cc1ee1" upstream="Morty"/>
+    <project name="meta-qt5/meta-qt5.git" path="layers/meta-qt5" remote="github" revision="d8b531530fa42b59aa0a5b123d87a30d749cbcc4" upstream="rocko"/>
+    <project name="schnitzeltony/meta-qt5-extra.git" path="layers/meta-qt5-extra" remote="github" revision="79e26686520f2ce5f743975e90116b263a33697f" upstream="rocko"/>
+
+    <!-- Toradex -->
+    <project name="meta-lxde.git" path="layers/meta-lxde" remote="toradex" revision="f436137fcc4ac700dc5c1b5e31e5b3c27568fc3e" upstream="rocko"/>
+    <project name="meta-toradex-bsp-common.git" path="layers/meta-toradex-bsp-common" remote="toradex" revision="b3fe56eec075ccd719b0ec1fde32ad9c37f0cca0" upstream="rocko"/>
+    <project name="meta-toradex-demos.git" path="layers/meta-toradex-demos" remote="toradex" revision="ca638002516c82fb3a1e22f0f1b8349584021a2b" upstream="rocko"/>
+    <project name="meta-toradex-nxp.git" path="layers/meta-toradex-nxp" remote="toradex" revision="53d4be5b9b8f609ae713e6eea8e935a73f7f7fd6" upstream="rocko"/>
+    <project name="meta-toradex-tegra.git" path="layers/meta-toradex-tegra" remote="toradex" revision="9f4378d25ccdae1eaab77c5e72c983fbe1de4e8c" upstream="rocko"/>
+
+    <!-- Yocto Project -->
+    <project name="meta-qt4" path="layers/meta-qt4" remote="yocto" revision="e290738759ef3f39c9e079eaa9b606a62107e5ba" upstream="rocko"/>
+
+    <!-- u-blox/sw-host-sho -->
+    <project name="meta-ublox-tk1.git" path="layers/meta-ublox-tk1" remote="sw-host-sho" revision="rocko">
+        <linkfile dest="ublox-init-build-env" src="buildconf/ublox-init-build-env"/>
+    </project>
+</manifest>
